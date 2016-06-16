@@ -8,13 +8,32 @@
 
 import UIKit
 
-class DetailController: UIViewController {
 
+class DetailController: UIViewController,idSendDelegate {
+    
+    func idSend(id: String) {
+        print(id)
+    }
+    
+    @IBAction func voltarItemBar(sender: AnyObject)
+    {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let vc : ViewController = ViewController();
+        vc.delegate = self
+        
+        
         // Do any additional setup after loading the view.
+        
+    
+        
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

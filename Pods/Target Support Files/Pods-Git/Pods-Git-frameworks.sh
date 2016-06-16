@@ -85,12 +85,14 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Git/Alamofire.framework"
+  install_framework "Pods-Git/Cosmos.framework"
   install_framework "Pods-Git/SDWebImage.framework"
   install_framework "Pods-Git/SwiftyJSON.framework"
   install_framework "Pods-Git/UIScrollView_InfiniteScroll.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Git/Alamofire.framework"
+  install_framework "Pods-Git/Cosmos.framework"
   install_framework "Pods-Git/SDWebImage.framework"
   install_framework "Pods-Git/SwiftyJSON.framework"
   install_framework "Pods-Git/UIScrollView_InfiniteScroll.framework"

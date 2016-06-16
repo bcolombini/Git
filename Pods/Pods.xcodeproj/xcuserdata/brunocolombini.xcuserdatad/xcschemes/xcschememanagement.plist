@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Cosmos.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Git.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,12 +37,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>18E6B36CAF28C6E3453C7A9EFA1E65CF</key>
+		<key>024947DC71BCA47C628717967B465B7C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>379C04BA2106DD467EBBC9A05D302CC6</key>
+		<key>1BDC67FCEA2207697B5C48597C221B50</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2E0B97B3F4716310C6594CBF82528A56</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>608B49B5DDACC601EE8044A1931993F9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +62,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DED7314F88C42149D723711A5AC928AF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E144B692B337E593A260EE96FC41571D</key>
+		<key>888F72F6E05A64769E14546578040712</key>
 		<dict>
 			<key>primary</key>
 			<true/>

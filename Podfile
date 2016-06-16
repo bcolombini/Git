@@ -7,5 +7,6 @@ pod 'Alamofire', '~> 3.0'
 pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 pod 'SDWebImage', '~>3.8'
 pod 'UIScrollView-InfiniteScroll'
+pod 'Cosmos', '~> 1.2'
 
 end

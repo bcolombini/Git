@@ -17,6 +17,7 @@
 		8586027B1D00F02F00E5B23F /* GitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8586027A1D00F02F00E5B23F /* GitUITests.swift */; };
 		85A840811D10890300D8C475 /* MovieClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A840801D10890300D8C475 /* MovieClass.swift */; };
 		85A840851D108E9F00D8C475 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A840841D108E9F00D8C475 /* DetailController.swift */; };
+		85A840871D10A25E00D8C475 /* global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A840861D10A25E00D8C475 /* global.swift */; };
 		85D3AB421D0F9BD8004722FC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D3AB411D0F9BD8004722FC /* TableViewCell.swift */; };
 		BAE56662BC800AD2ADABBB2E /* Pods_Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514F0DF29113BE942B2728E5 /* Pods_Git.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		8586027C1D00F02F00E5B23F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85A840801D10890300D8C475 /* MovieClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieClass.swift; sourceTree = "<group>"; };
 		85A840841D108E9F00D8C475 /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		85A840861D10A25E00D8C475 /* global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = global.swift; sourceTree = "<group>"; };
 		85D3AB411D0F9BD8004722FC /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 				858602611D00F02E00E5B23F /* Assets.xcassets */,
 				858602631D00F02E00E5B23F /* LaunchScreen.storyboard */,
 				858602661D00F02E00E5B23F /* Info.plist */,
+				85A840861D10A25E00D8C475 /* global.swift */,
 			);
 			path = Git;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85A840871D10A25E00D8C475 /* global.swift in Sources */,
 				8586025D1D00F02E00E5B23F /* ViewController.swift in Sources */,
 				85D3AB421D0F9BD8004722FC /* TableViewCell.swift in Sources */,
 				85345CE21D0C687B00766C94 /* TMDBApi.swift in Sources */,

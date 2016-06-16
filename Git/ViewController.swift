@@ -11,15 +11,22 @@ import SDWebImage
 import SwiftyJSON
 import UIScrollView_InfiniteScroll
 
+protocol idSendDelegate{
+    func idSend(id: String)
+}
+
 class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
     @IBOutlet weak var table: UITableView!
     var data : NSMutableArray = []
     var page : Int = 0;
+    
+    var delegate: idSendDelegate? = nil
+    
     func add()
     {
         self.page += 1
-        let tmdb = TMDBApi(api_key: "978936c5482bb85e744bd805dad57ba9");
+        let tmdb = TMDBApi(api_key: API_KEY);
         tmdb.getMovieRated(self.page){
             (data,error) in
             if error != nil{
@@ -82,17 +89,20 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         let cell = tableView.dequeueReusableCellWithIdentifier("Celula", forIndexPath: indexPath) as?TableViewCell
         let movie = MovieClass(movie: self.data.objectAtIndex(indexPath.row))
 
-        cell?.titulo?.text = movie.getTitle()
-        cell?.pontuacao?.text = movie.getVoteAverage()
+        cell?.setTitle(movie.getTitle())
+        cell?.setRated(movie.getVoteAverage(), votes: movie.getVotes())
+        
         cell?.poster?.sd_setImageWithURL(movie.getUrlPoster())
         
         return cell!
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    
         let movie = MovieClass(movie: self.data.objectAtIndex(indexPath.row))
-        self.presentViewController(self.storyboard!.instantiateViewControllerWithIdentifier("Detail") as UIViewController, animated: true,completion: nil)
-        print(movie.getID())
+        let present: UIViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Detail")
+        self.delegate?.idSend(movie.getID())
+        self.presentViewController(present, animated: true,completion: nil)
     }
     
 
