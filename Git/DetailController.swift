@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import AVFoundation
 
-
-class DetailController: UIViewController,idSendDelegate {
+class DetailController: UIViewController{
+    
+    var ID:String = ""
     
     func idSend(id: String) {
-        print(id)
+        self.ID = id
     }
     
     @IBAction func voltarItemBar(sender: AnyObject)
@@ -20,13 +22,16 @@ class DetailController: UIViewController,idSendDelegate {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let vc : ViewController = ViewController();
-        vc.delegate = self
-        
-        
+        let movie = TMDBApi(api_key: API_KEY)
+        movie.getMovie(self.ID)
+        {
+            (rs,er) in
+            print(rs)
+        }
         // Do any additional setup after loading the view.
         
     

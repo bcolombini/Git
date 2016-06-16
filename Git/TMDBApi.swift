@@ -47,7 +47,19 @@ class TMDBApi: NSObject {
         }
     }
     
-    func request(r: String,complete:(resultado:AnyObject? ,error : NSError?) -> Void)
+    func getMovie(id: String,complete:(retorno:AnyObject,error: NSError?) -> Void)
+    {
+     
+        self.request("movie/"+id){
+            (rs,er) in
+            if er != nil{
+                return
+            }
+            complete(retorno:rs!,error: nil)
+        }
+    }
+    
+    private func request(r: String,complete:(resultado:AnyObject? ,error : NSError?) -> Void)
     {
         Alamofire.request(.GET,"http://api.themoviedb.org/3/"+r,parameters:self.params).responseJSON{
             response in
@@ -55,6 +67,7 @@ class TMDBApi: NSObject {
         }
         
     }
+    
     
     
     

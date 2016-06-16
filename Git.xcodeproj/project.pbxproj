@@ -19,6 +19,7 @@
 		85A840851D108E9F00D8C475 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A840841D108E9F00D8C475 /* DetailController.swift */; };
 		85A840871D10A25E00D8C475 /* global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A840861D10A25E00D8C475 /* global.swift */; };
 		85D3AB421D0F9BD8004722FC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D3AB411D0F9BD8004722FC /* TableViewCell.swift */; };
+		85E376A41D1304FD009E5F8A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E376A31D1304FD009E5F8A /* AVFoundation.framework */; };
 		BAE56662BC800AD2ADABBB2E /* Pods_Git.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 514F0DF29113BE942B2728E5 /* Pods_Git.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		85A840841D108E9F00D8C475 /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		85A840861D10A25E00D8C475 /* global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = global.swift; sourceTree = "<group>"; };
 		85D3AB411D0F9BD8004722FC /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		85E376A31D1304FD009E5F8A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E376A41D1304FD009E5F8A /* AVFoundation.framework in Frameworks */,
 				BAE56662BC800AD2ADABBB2E /* Pods_Git.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +104,7 @@
 		3AC5D2DF8A0AC6894BC163FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				85E376A31D1304FD009E5F8A /* AVFoundation.framework */,
 				514F0DF29113BE942B2728E5 /* Pods_Git.framework */,
 			);
 			name = Frameworks;
