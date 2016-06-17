@@ -8,29 +8,44 @@
 
 import UIKit
 import AVFoundation
+import Cosmos
 
 class DetailController: UIViewController{
     
     var ID:String = ""
+    @IBOutlet var poster : UIImageView?
+    @IBOutlet var overview : UITextView?
+    @IBOutlet var titulo : UILabel?
+    @IBOutlet var star : CosmosView?
+
+    @IBAction func backButton(sender : AnyObject)
+    {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    @IBAction func playTrailer(sender: AnyObject)
+    {
+    
+    }
     
     func idSend(id: String) {
         self.ID = id
     }
     
-    @IBAction func voltarItemBar(sender: AnyObject)
-    {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let movie = TMDBApi(api_key: API_KEY)
-        movie.getMovie(self.ID)
+        let TMDB = TMDBApi(api_key: API_KEY)
+        TMDB.getMovie(self.ID)
         {
             (rs,er) in
-            print(rs)
+            let movie = MovieClass(movie: rs)
+            self.titulo?.text = movie.getTitle()
+            self.titulo?.textColor = UIColor.whiteColor()
+            self.overview?.text = movie.getOverview()
+            self.poster?.sd_setImageWithURL(movie.getUrlPoster())
+            self.star?.rating = 1
+            self.star?.text = String(movie.getVoteAverage())+"/10"
+            
         }
         // Do any additional setup after loading the view.
         

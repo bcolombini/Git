@@ -34,12 +34,16 @@ class TableViewCell: UITableViewCell {
         self.titulo?.text = titulo
     }
     
-    func setRated(number: Double,votes: Int = 0)
+    func setRated(number: Double,votes: String! = nil)
     {
-        if votes != 0{
-            self.cosmosView?.text = "("+String(votes)+")"
+        if votes != nil{
+            self.cosmosView?.text = votes
         }
-        self.cosmosView?.rating = number
+        self.cosmosView?.rating = number/2
     }
-
+    
+    func setPosterImage(imageURL : NSURL)
+    {
+        self.poster?.sd_setImageWithURL(imageURL)
+    }
 }

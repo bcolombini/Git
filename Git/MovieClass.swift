@@ -25,7 +25,7 @@ class MovieClass: NSObject {
     
     func getVoteAverage() -> Double
     {
-        return Double(self.movie.valueForKey("vote_average")! as! NSNumber)/2
+        return Double(self.movie.valueForKey("vote_average")! as! NSNumber)
     }
     
     func getUrlPoster() -> NSURL
@@ -42,5 +42,10 @@ class MovieClass: NSObject {
     
     func getVotes() ->Int{
         return Int(self.movie.valueForKey("vote_count")! as! NSNumber)
+    }
+    
+    func getOverview() -> String
+    {
+        return String(self.movie.valueForKey("overview")!)
     }
 }

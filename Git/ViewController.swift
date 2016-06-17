@@ -86,8 +86,8 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         
         let movie = MovieClass(movie: self.data.objectAtIndex(indexPath.row))
         cell?.setTitle(movie.getTitle())
-        cell?.setRated(movie.getVoteAverage(), votes: movie.getVotes())
-        cell?.poster?.sd_setImageWithURL(movie.getUrlPoster())
+        cell?.setRated(movie.getVoteAverage(), votes: "("+String(movie.getVotes())+")")
+        cell?.setPosterImage(movie.getUrlPoster())
         
         return cell!
     }
@@ -95,20 +95,11 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     
         let movie = MovieClass(movie: self.data.objectAtIndex(indexPath.row))
-//        let present: UIViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Detail")
-//        self.delegate?.idSend(movie.getID())
-        
-//        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//        EventViewController *eventview = [sb instantiateViewControllerWithIdentifier:@"Event"];
-//        eventview.idFacebook = [[self.dataSource objectAtIndex:indexPath.row] objectForKey:@"id_facebook"];
-//        eventview.nameEvent = [[self.dataSource objectAtIndex:indexPath.row] objectForKey:@"name"];
-//        eventview.imgEvent = [[self.dataSource objectAtIndex:indexPath.row] objectForKey:@"link_img"];
-//        [self.navigationController pushViewController:eventview animated:true];
-        
         let sb: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let sv: DetailController = (sb.instantiateViewControllerWithIdentifier("Detail") as? DetailController)!
-        sv.idSend(movie.getID())
-        self.presentViewController(sv, animated: true,completion: nil)
+        let detailController: DetailController = (sb.instantiateViewControllerWithIdentifier("Detail") as? DetailController)!
+        detailController.idSend(movie.getID())
+        self.presentViewController(detailController, animated: true,completion: nil)
+        
     }
     
 
